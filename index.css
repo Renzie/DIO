@@ -1,0 +1,293 @@
+  /*
+ * Globals
+ */
+
+ @media (min-width: 1920px) {
+   .jumbotron {
+      min-height: 1080px;
+   }
+
+   .sponsors img {
+     width: 8%;
+     margin-bottom: 20px;
+   }
+ }
+
+ @media (max-width: 992px) {
+   .no-brand a {
+     line-height: 1.5rem !important;
+   }
+   .sponsors img {
+     display: block;
+   }
+
+ }
+
+
+h2 {
+  color: #eba50a;
+  font-weight: normal;
+
+}
+/*
+* header
+*/
+.navbar {
+  min-width: 100%;
+  padding: 0;
+}
+
+.navbar-toggler-icon {
+  background-image: url('resources/burger.svg');
+}
+
+.navbar-brand a{
+    text-decoration: none;
+    color: #333;
+}
+
+.navbar-brand a span {
+  display: block;
+}
+
+.navbar.navbar-transparent {
+    background: /*rgba(0, 0, 0, 0.4); */ #f5f5f5;
+    position: sticky;
+}
+
+.logo {
+  text-decoration: none;
+  color: black;
+}
+
+.logo img {
+  width: 15%;
+}
+
+.navbar ul {
+  height: 100%;
+  margin: 0;
+}
+
+.no-brand a{
+    line-height: 3.5rem;
+   display: inline-block;
+   text-align: center;
+   color: #333;
+   height: 100%;
+   width:100%;
+   transition: all 2s;
+   text-decoration: none;
+}
+
+.no-brand a:before {
+  transition: all .5s;
+}
+
+.no-brand a:hover {
+  color: #333;
+  z-index: 1;
+}
+
+.no-brand a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #aaa;
+  height: 1px;
+}
+
+.no-brand a:hover:after {
+  width: 100%;
+  z-index: -10;
+  animation: fill 1s forwards;
+  -webkit-animation: fill 1s forwards;
+  -moz-animation: fill 1s forwards;
+  opacity: 1;
+}
+
+.no-brand a:hover {
+  color: #ffc107;
+}
+
+/* Keyframes */
+@-webkit-keyframes fill {
+  0% {
+    width: 0%;
+    height: 1px;
+  }
+  50% {
+    width: 100%;
+    height: 1px;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+    background: #333;
+  }
+}
+
+.jumbotron {
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.60),
+      rgba(0, 0, 0, 0)
+    ),
+    url("resources/pictures/DIO_gala.jpg") no-repeat center center;
+  -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+  background-repeat: no-repeat;
+  color: #f5f5f5;
+  padding: 5em inherit;
+
+}
+
+.card {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.card-container {
+    margin-top: 10rem;
+}
+
+/*
+ * Base structure
+ */
+
+html,
+body {
+  height: 100%;
+  background-color: #f5f5f5;
+}
+
+body {
+  display: -ms-flexbox;
+  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+}
+
+.cover-container {
+  max-width: 42em;
+}
+
+
+
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -.05rem;
+}
+
+
+/**
+* calendar
+*/
+
+.calendar  iframe {
+    height: 600px;
+}
+
+/**
+* info
+*/
+
+.langenelle {
+  margin-bottom: 2rem;
+}
+
+/**
+* Praesidium
+*/
+
+.box{
+  margin: 0 auto;
+}
+
+.Pcard{
+    position: relative;
+    width: 300px;
+    height: 350px;
+    background: #fff;
+    margin: 0 auto;
+    border-radius: 4px;
+    box-shadow:0 2px 10px rgba(0,0,0,.2);
+  }
+  .Pcard:before,
+  .Pcard:after
+  {
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    background: #fff;
+    transition: 0.5s;
+    z-index:-1;
+  }
+
+  .Pcard .imgBx{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  bottom: 10px;
+  right: 10px;
+  background: #222;
+  transition: 0.5s;
+  z-index: 1;
+  }
+
+  .Pcard:hover .imgBx
+  {
+    bottom: 80px;
+  }
+
+  .Pcard .imgBx img{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+
+  .Pcard .details{
+      position: absolute;
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
+      height: 60px;
+      text-align: center;
+  }
+
+  .Pcard .details h2{
+   margin: 0;
+   padding: 0;
+   font-weight: 600;
+   font-size: 15px;
+   color: #777;
+   text-transform: uppercase;
+  }
+
+  .Pcard .details h2 span{
+  font-weight: 500;
+  font-size: 16px;
+  color: #eba50a;
+  display: block;
+  margin-top: 5px;
+   }
